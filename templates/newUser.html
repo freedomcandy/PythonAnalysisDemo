@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h3>{{ cTime }}</h3>
+<h4>今日新增人数: {{ count }}</h4>
+<div>
+    <ul>
+        {% for item in obj %}
+           <li>设备:{{ item['device'] }}   系统:{{ item['system'] }}  网络:{{ item['network'] }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+</body>
+</html>
