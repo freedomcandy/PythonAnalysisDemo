@@ -1,10 +1,11 @@
 {% extends "bootstrap/base.html" %}
-{% block title %}Flasky{% endblock %}
+
+
 {% block navbar %}
 <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">主页</a></li>
+            <li role="presentation" class="active"><a href="/">主页</a></li>
             <li role="presentation"><a href="/postsSort/all">攻略排行</a></li>
             <li role="presentation"><a href="/itemSort/all">商品跳TB</a></li>
             <li role="presentation"><a href="/itemsSort/all">攻略跳商品跳TB</a></li>
@@ -13,11 +14,9 @@
     </div>
 </div>
 {% endblock %}
- 
+
+
+
 {% block content %}
-<div class="container">
-    <div class="page-header">
-        <h1>Hello, {{ name }}!</h1>
-    </div>
-</div>
-{% endblock %}
+  <h1>Hello, Life</h1>
+{% endblock%}

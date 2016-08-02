@@ -23,7 +23,7 @@ currentTime =  time.strftime('%Y-%m-%d', time.localtime(time.time()))
 
 @app.route('/',methods=['GET','POST'])
 def indexPage():
-    return render_template('awBase.html')
+    return render_template('index.html')
 
 @app.route('/user/<name>')
 def hello(name):
@@ -230,7 +230,7 @@ def quertPostsToTBSort(times):
     # 排序
     l = sorted(itemObjs, key=lambda e: e.__getitem__('count'), reverse=True)
     # return jsonify(code=200, data={'item': l}, message='OK')
-    return render_template('itemSort.html', obj=l)
+    return render_template('itemsSort.html', obj=l)
 
 
 
