@@ -11,7 +11,7 @@ import random                       #随机数
 import time                         #获取当前时间
 
 
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='')
 bootstrap = Bootstrap(app)
 conn = pymongo.MongoClient(host="172.16.10.50", port=27017)
 db = conn['RoyDB']
@@ -23,6 +23,7 @@ currentTime =  time.strftime('%Y-%m-%d', time.localtime(time.time()))
 
 @app.route('/',methods=['GET','POST'])
 def indexPage():
+    # return app.send_static_file('index.html')
     return render_template('index.html')
 
 @app.route('/user/<name>')
